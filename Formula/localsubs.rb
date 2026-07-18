@@ -5,22 +5,22 @@
 class Localsubs < Formula
   desc "Local AI subtitle translation helper for streaming video"
   homepage "https://github.com/aiden1020/localsubs"
-  version "0.3.2"
+  version "0.3.3"
 
   depends_on "llama.cpp"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/aiden1020/localsubs/releases/download/v0.3.2/localsubs_darwin_amd64.tar.gz"
-    sha256 "c7d74d118103630e892f627592d387db30f187bb48a469848dcdbe5bcd7d6e95"
+    url "https://github.com/aiden1020/localsubs/releases/download/v0.3.3/localsubs_darwin_amd64.tar.gz"
+    sha256 "047a0d030c10342a38da4fd5c03d43555a8781de048dceb6b926f13336233dcd"
 
     define_method(:install) do
       bin.install "localsubs"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/aiden1020/localsubs/releases/download/v0.3.2/localsubs_darwin_arm64.tar.gz"
-    sha256 "e4ba0e8bc88ce03e9a3833c363263060bd28ac4eb3364bc62a1c2bd845458a2a"
+    url "https://github.com/aiden1020/localsubs/releases/download/v0.3.3/localsubs_darwin_arm64.tar.gz"
+    sha256 "848535762177c58d4a960260e097dcb7339ec64bca3db4f41ec0c88059152de5"
 
     define_method(:install) do
       bin.install "localsubs"
@@ -30,8 +30,7 @@ class Localsubs < Formula
   def caveats
     <<~EOS
       Get started:
-        localsubs model download   # download translation model (~350 MB)
-        localsubs install           # connect to Chrome
+        localsubs setup   # download the model and install Chrome integration
     EOS
   end
 
