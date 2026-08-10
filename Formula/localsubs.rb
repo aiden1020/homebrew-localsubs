@@ -5,22 +5,22 @@
 class Localsubs < Formula
   desc "Local AI subtitle translation helper for streaming video"
   homepage "https://github.com/aiden1020/localsubs"
-  version "0.4.1"
+  version "0.5.0"
 
   depends_on "llama.cpp"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/aiden1020/localsubs/releases/download/v0.4.1/localsubs_darwin_amd64.tar.gz"
-    sha256 "9f05f2d9c5382882ffc9c73fbf3a35d7dad30bb3e297d3e4c3e0b8fe39ae102f"
+    url "https://github.com/aiden1020/localsubs/releases/download/v0.5.0/localsubs_darwin_amd64.tar.gz"
+    sha256 "0c9155af9f1cb55fde3a08f734843f023ce2bee6b358d91bde24c516312bdbff"
 
     define_method(:install) do
       bin.install "localsubs"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/aiden1020/localsubs/releases/download/v0.4.1/localsubs_darwin_arm64.tar.gz"
-    sha256 "8952c5df86db5948508bda284739eac38f27e99161a93a71955ed773d38574e9"
+    url "https://github.com/aiden1020/localsubs/releases/download/v0.5.0/localsubs_darwin_arm64.tar.gz"
+    sha256 "613ee2e62f8645da85c42efc2b94dea99e5b81db66245fab1d2cd4099b2d5679"
 
     define_method(:install) do
       bin.install "localsubs"
